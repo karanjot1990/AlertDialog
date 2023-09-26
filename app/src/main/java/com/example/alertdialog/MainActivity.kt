@@ -27,9 +27,13 @@ class MainActivity : AppCompatActivity() {
                     binding.tvNumber.setText(i.toString())
                 }
                 .setNegativeButton("No"){_,_->
-
+                  i--
+                    binding.tvNumber.setText(i.toString())
                 }
-                .setNeutralButton("Reset"){_,_-> }
+                .setNeutralButton("Reset") { _, _ ->
+                    i = 0
+                    binding.tvNumber.setText(i.toString())
+                }
                 .show()
         }
     }
